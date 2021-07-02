@@ -1,7 +1,15 @@
+let fullPageWrap = document.querySelector("#fullpage");
+console.log(fullPageWrap);
+
 new fullpage("#fullpage", {
   //options here
   autoScrolling: true,
-  scrollHorizontally: true,
+
+  afterLoad: function (origin, destination, direction) {
+    if (destination.index == 2) {
+      fullpage_api.setAllowScrolling(false);
+    }
+  },
 });
 
 gsap.registerPlugin(ScrambleTextPlugin, ScrollTrigger, Flip);
@@ -207,3 +215,36 @@ ScrollTrigger.matchMedia({
     s1TL.play();
   },
 });
+
+const swiper = new Swiper(".swiper-container", {
+  // Optional parameters
+  direction: "vertical",
+  mousewheel: true,
+  speed: 1000,
+  parallax: true,
+
+  // If we need pagination
+
+  // Navigation arrows
+});
+
+const swiper2 = new Swiper(".swiper-container2", {
+  // Optional parameters
+  pagination: {
+    el: ".swiper-pagination",
+    speed: 5000,
+  },
+
+  // Navigation arrows
+
+  direction: "vertical",
+  mousewheel: true,
+
+  // If we need pagination
+
+  // Navigation arrows
+});
+
+setTimeout(() => {
+  swiper2.slideTo(2, 2000);
+}, 4000);
