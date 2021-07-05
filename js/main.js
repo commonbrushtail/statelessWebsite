@@ -1,24 +1,11 @@
-let fullPageWrap = document.querySelector("#fullpage");
-console.log(fullPageWrap);
+var lethargy = new Lethargy(); // Use defaults
 
-new fullpage("#fullpage", {
-  //options here
-  autoScrolling: true,
-
-  afterLoad: function (origin, destination, direction) {
-    if (destination.index == 2) {
-      fullpage_api.setAllowScrolling(false);
-    }
-  },
-});
-
-gsap.registerPlugin(ScrambleTextPlugin, ScrollTrigger, Flip);
+gsap.registerPlugin(ScrambleTextPlugin, ScrollTrigger, Flip, ScrollToPlugin);
 
 ScrollTrigger.matchMedia({
   // large
-
   // medium
-
+  /*
   "(min-width: 320px) and (max-width: 768px)": function () {
     function s1Flip() {
       let containers1 = document.querySelector(".container.s1");
@@ -214,37 +201,23 @@ ScrollTrigger.matchMedia({
     );
     s1TL.play();
   },
+  */
 });
 
-const swiper = new Swiper(".swiper-container", {
-  // Optional parameters
-  direction: "vertical",
-  mousewheel: true,
-  speed: 1000,
-  parallax: true,
+let sections = document.querySelectorAll(".section");
+console.log(sections);
+function goToSection(section, anim) {
+  gsap.to(window, {
+    scrollTo: { y: section, autoKill: false },
+    duration: 1,
+  });
+}
 
-  // If we need pagination
-
-  // Navigation arrows
+sections.forEach((section) => {
+  ScrollTrigger.create({
+    trigger: section,
+    end: "bottom top+=1",
+    onEnter: () => goToSection(section),
+    onEnterBack: () => goToSection(section),
+  });
 });
-
-const swiper2 = new Swiper(".swiper-container2", {
-  // Optional parameters
-  pagination: {
-    el: ".swiper-pagination",
-    speed: 5000,
-  },
-
-  // Navigation arrows
-
-  direction: "vertical",
-  mousewheel: true,
-
-  // If we need pagination
-
-  // Navigation arrows
-});
-
-setTimeout(() => {
-  swiper2.slideTo(2, 2000);
-}, 4000);
