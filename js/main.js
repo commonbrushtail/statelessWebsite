@@ -1,5 +1,3 @@
-var lethargy = new Lethargy(); // Use defaults
-
 gsap.registerPlugin(ScrambleTextPlugin, ScrollTrigger, Flip, ScrollToPlugin);
 
 ScrollTrigger.matchMedia({
