@@ -28936,6 +28936,26 @@ video {
   padding-top: 7vh;
 }
 
+.pt-10per {
+  padding-top: 10%;
+}
+
+.pl-10per {
+  padding-left: 10%;
+}
+
+.pr-10per {
+  padding-right: 10%;
+}
+
+.h-97per {
+  height: 97%;
+}
+
+.top-25per {
+  top: 25%;
+}
+
 .top-30per {
   top: 30%;
 }
