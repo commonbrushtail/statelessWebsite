@@ -202,20 +202,112 @@ ScrollTrigger.matchMedia({
   */
 });
 
-let sections = document.querySelectorAll(".section");
-console.log(sections);
-function goToSection(section, anim) {
-  gsap.to(window, {
-    scrollTo: { y: section, autoKill: false },
-    duration: 1,
-  });
-}
+new fullpage("#fullpage", {
+  //options here
+  autoScrolling: true,
+  onLeave: function (origin, destination, direction) {
+    if (
+      origin.item.classList.contains("beforeQuote") &&
+      destination.item.classList.contains("fpQuoteSlide1")
+    ) {
+      gsap.fromTo(
+        ".quote-slide",
+        {
+          opacity: 1,
+          y: "100vh",
+        },
+        {
+          opacity: 1,
+          y: 0,
+        }
+      );
+    }
+    if (
+      destination.item.classList.contains("beforeQuote") &&
+      origin.item.classList.contains("fpQuoteSlide1")
+    ) {
+      gsap.fromTo(
+        ".quote-slide",
+        {
+          opacity: 1,
+          y: 0,
+        },
+        {
+          opacity: 1,
+          y: "100vh",
+        }
+      );
+    }
 
-sections.forEach((section) => {
-  ScrollTrigger.create({
-    trigger: section,
-    end: "bottom top+=1",
-    onEnter: () => goToSection(section),
-    onEnterBack: () => goToSection(section),
-  });
+    if (
+      destination.item.classList.contains("afterQuote") &&
+      origin.item.classList.contains("fpQuoteSlide5")
+    ) {
+      gsap.fromTo(
+        ".quote-slide",
+        {
+          opacity: 1,
+          y: 0,
+        },
+        {
+          opacity: 0,
+          y: "-100vh",
+        }
+      );
+    }
+
+    if (
+      destination.item.classList.contains("fpQuoteSlide5") &&
+      origin.item.classList.contains("afterQuote")
+    ) {
+      gsap.fromTo(
+        ".quote-slide",
+        {
+          opacity: 1,
+          y: "-100vh",
+        },
+        {
+          opacity: 1,
+          y: 0,
+        }
+      );
+    }
+
+    if (destination.item.classList.contains("fpQuoteSlide1")) {
+      swiper.slideTo(0);
+      swiper2.slideTo(0);
+    }
+    if (destination.item.classList.contains("fpQuoteSlide2")) {
+      swiper.slideTo(1);
+      swiper2.slideTo(0);
+    }
+    if (destination.item.classList.contains("fpQuoteSlide3")) {
+      swiper.slideTo(2);
+      swiper2.slideTo(1);
+    }
+    if (destination.item.classList.contains("fpQuoteSlide4")) {
+      swiper.slideTo(3);
+      swiper2.slideTo(1);
+    }
+    if (destination.item.classList.contains("fpQuoteSlide5")) {
+      swiper.slideTo(4);
+      swiper2.slideTo(2);
+    }
+  },
+});
+
+const swiper = new Swiper(".swiper-container", {
+  allowTouchMove: false,
+  parallax: true,
+  resistanceRatio: 0,
+  speed: 1000,
+  direction: "vertical",
+});
+
+const swiper2 = new Swiper(".swiper-container2", {
+  allowTouchMove: false,
+  nested: true,
+  parallax: true,
+  resistanceRatio: 0,
+  speed: 1000,
 });
