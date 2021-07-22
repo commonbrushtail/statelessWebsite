@@ -3,6 +3,14 @@ const viewer = new ImageCompare(element, { fluidMode: true, hoverStart: true }).
 
 const element2 = document.getElementById("image-compare2");
 const viewer2 = new ImageCompare(element2, { fluidMode: true, hoverStart: true }).mount();
+var s1TL = gsap.timeline({ paused: true });
+gsap.set(".a2, .a3, .a4, .a5", {
+  autoAlpha: 0,
+});
+gsap.set(".a3, .a4, .a5", {
+  position: "absolute",
+  autoAlpha: 0,
+});
 var pie = gsap.timeline();
 var dart = gsap.timeline({ paused: true });
 var gearMobile = gsap.timeline({ paused: true });
@@ -106,14 +114,6 @@ ScrollTrigger.matchMedia({
       "<"
     );
 
-    var s1TL = gsap.timeline();
-    s1TL.set(".a2, .a3, .a4, .a5", {
-      autoAlpha: 0,
-    });
-    s1TL.set(".a3, .a4, .a5", {
-      position: "absolute",
-      autoAlpha: 0,
-    });
     s1TL.fromTo(
       ".a1",
       {
@@ -182,14 +182,6 @@ ScrollTrigger.matchMedia({
       },
       "<"
     );
-
-    /*
-    s1TL.to(".a2", {
-      display: "block",
-      autoAlpha: 1,
-      duration: 1.5,
-    });
-    */
   },
   "only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2)": function () {
     console.log("ipad pro portrait");
@@ -231,14 +223,6 @@ ScrollTrigger.matchMedia({
       "<+0.7"
     );
 
-    var s1TL = gsap.timeline();
-    s1TL.set(".a2, .a3, .a4, .a5", {
-      autoAlpha: 0,
-    });
-    s1TL.set(".a3, .a4, .a5", {
-      position: "absolute",
-      autoAlpha: 0,
-    });
     s1TL.fromTo(
       ".a1",
       {
@@ -307,14 +291,6 @@ ScrollTrigger.matchMedia({
       },
       "<"
     );
-
-    /*
-    s1TL.to(".a2", {
-      display: "block",
-      autoAlpha: 1,
-      duration: 1.5,
-    });
-    */
   },
   "(min-width: 1280px)": function () {
     console.log("desktop from 1280px onward");
@@ -417,14 +393,6 @@ ScrollTrigger.matchMedia({
       "<+0.7"
     );
 
-    var s1TL = gsap.timeline();
-    s1TL.set(".a2, .a3, .a4, .a5", {
-      autoAlpha: 0,
-    });
-    s1TL.set(".a3, .a4, .a5", {
-      position: "absolute",
-      autoAlpha: 0,
-    });
     s1TL.fromTo(
       ".a1",
       {
@@ -580,14 +548,7 @@ ScrollTrigger.matchMedia({
       },
       "<+0.7"
     );
-    var s1TL = gsap.timeline();
-    s1TL.set(".a2, .a3, .a4, .a5", {
-      autoAlpha: 0,
-    });
-    s1TL.set(".a3, .a4, .a5", {
-      position: "absolute",
-      autoAlpha: 0,
-    });
+
     s1TL.fromTo(
       ".a1",
       {
@@ -743,14 +704,7 @@ ScrollTrigger.matchMedia({
       },
       "<+0.7"
     );
-    var s1TL = gsap.timeline();
-    s1TL.set(".a2, .a3, .a4, .a5", {
-      autoAlpha: 0,
-    });
-    s1TL.set(".a3, .a4, .a5", {
-      position: "absolute",
-      autoAlpha: 0,
-    });
+
     s1TL.fromTo(
       ".a1",
       {
@@ -905,14 +859,7 @@ ScrollTrigger.matchMedia({
       },
       "<+0.7"
     );
-    var s1TL = gsap.timeline();
-    s1TL.set(".a2, .a3, .a4, .a5", {
-      autoAlpha: 0,
-    });
-    s1TL.set(".a3, .a4, .a5", {
-      position: "absolute",
-      autoAlpha: 0,
-    });
+
     s1TL.fromTo(
       ".a1",
       {
@@ -1068,14 +1015,7 @@ ScrollTrigger.matchMedia({
       },
       "<+0.7"
     );
-    var s1TL = gsap.timeline();
-    s1TL.set(".a2, .a3, .a4, .a5", {
-      autoAlpha: 0,
-    });
-    s1TL.set(".a3, .a4, .a5", {
-      position: "absolute",
-      autoAlpha: 0,
-    });
+
     s1TL.fromTo(
       ".a1",
       {
@@ -1234,6 +1174,10 @@ new fullpage("#fullpage", {
     }
   },
   afterLoad: function (origin, destination, direction) {
+    if (destination.item.classList.contains("section1")) {
+      s1TL.resume();
+    }
+
     if (destination.item.classList.contains("pie-section")) {
       console.log("pie");
       pie.to(".pie", { autoAlpha: 1 });

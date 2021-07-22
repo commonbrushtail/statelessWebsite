@@ -1396,7 +1396,7 @@ body {
 @media (min-width: 768px), only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
 
 .ob3 {
-    transform: translate(-121%, -52%)
+    transform: translate(-97%, -66%)
 }
   }
 
@@ -1442,7 +1442,7 @@ body {
 @media (min-width: 768px), only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
 
 .ob4 {
-    transform: translate(-131%, 68%)
+    transform: translate(-131%, 52%)
 }
   }
 
@@ -2038,6 +2038,10 @@ text {
     height:  33.333333%;
   }
 
+  .xs\:whitespace-nowrap{
+    white-space: nowrap;
+  }
+
   .xs\:pt-5vh{
     padding-top: 5vh;
   }
@@ -2161,8 +2165,8 @@ text {
     padding-top: 6vh;
   }
 
-  .md\:pt-85per{
-    padding-top: 85%;
+  .md\:pt-80per{
+    padding-top: 80%;
   }
 
   .md\:pb-5{
