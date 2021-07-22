@@ -18,6 +18,7 @@ s5TL.from(".white-dot", 1, {
 });
 s5TL.from(".red-dot", 1, {
   scale: 0.3,
+  autoAlpha: 0,
   y: "-1000",
   yoyo: true,
   transformOrigin: "50% 50%",
