@@ -3,11 +3,12 @@ const viewer = new ImageCompare(element, { fluidMode: true, hoverStart: true }).
 
 const element2 = document.getElementById("image-compare2");
 const viewer2 = new ImageCompare(element2, { fluidMode: true, hoverStart: true }).mount();
+var pie = gsap.timeline();
 var dart = gsap.timeline({ paused: true });
 var gearMobile = gsap.timeline({ paused: true });
 var gearDesktop = gsap.timeline({ paused: true });
 gsap.registerPlugin(ScrambleTextPlugin, ScrollTrigger, Flip, ScrollToPlugin, DrawSVGPlugin);
-
+gsap.set(".pie", { autoAlpha: 0 });
 ScrollTrigger.matchMedia({
   "(min-width: 320px) and (max-width: 1023.9px)": function () {
     console.log("mobile to portait ipad");
@@ -1233,6 +1234,20 @@ new fullpage("#fullpage", {
     }
   },
   afterLoad: function (origin, destination, direction) {
+    if (destination.item.classList.contains("pie-section")) {
+      console.log("pie");
+      pie.to(".pie", { autoAlpha: 1 });
+      pie.from(".top-circle", { duration: 3, drawSVG: 0 }, "<");
+      pie.from(".small-green-pie", { duration: 3, drawSVG: 0 }, "<");
+      pie.from(".yellow-pie", { duration: 3, drawSVG: 0 }, "<");
+      pie.from(".orange-pie", { duration: 3, drawSVG: 0 }, "<");
+      pie.from(".bottom-pie", { duration: 3, drawSVG: 0 }, "<");
+      pie.from(".pie-info-1", { autoAlpha: 0 }, "<0.5");
+      pie.from(".pie-info-2", { autoAlpha: 0 }, "<0.5");
+      pie.from(".pie-info-3", { autoAlpha: 0 }, "<0.5");
+      pie.from(".pie-info-4", { autoAlpha: 0 }, "<0.5");
+    }
+
     if (destination.item.classList.contains("dart-section")) {
       dart.play();
     }
