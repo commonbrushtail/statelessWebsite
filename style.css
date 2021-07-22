@@ -541,7 +541,6 @@ video {
 }
 
 
-.aspect-w-3,
 .aspect-w-9,
 .aspect-w-16{
   position: relative;
@@ -549,7 +548,6 @@ video {
 }
 
 
-.aspect-w-3 > *,
 .aspect-w-9 > *,
 .aspect-w-16 > *{
   position: absolute;
@@ -561,10 +559,6 @@ video {
   left: 0;
 }
 
-.aspect-w-3{
-  --tw-aspect-w: 3;
-}
-
 .aspect-w-9{
   --tw-aspect-w: 9;
 }
@@ -573,8 +567,8 @@ video {
   --tw-aspect-w: 16;
 }
 
-.aspect-h-3{
-  --tw-aspect-h: 3;
+.aspect-h-5{
+  --tw-aspect-h: 5;
 }
 
 .aspect-h-8{
@@ -583,6 +577,10 @@ video {
 
 .aspect-h-9{
   --tw-aspect-h: 9;
+}
+
+.aspect-h-14{
+  --tw-aspect-h: 14;
 }
 
 .pointer-events-none{
@@ -760,6 +758,10 @@ video {
 
 .h-2\/12{
   height: 16.666667%;
+}
+
+.h-4\/12{
+  height:  33.333333%;
 }
 
 .h-10\/12{
@@ -1037,6 +1039,11 @@ video {
   padding-right: 0.75rem;
 }
 
+.px-4{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .px-5{
   padding-left: 1.25rem;
   padding-right: 1.25rem;
@@ -1247,6 +1254,11 @@ body {
 
 .section1 {
   background-image: url("./assets/images/BG_01.png");
+  background-size: cover;
+}
+
+.section5 {
+  background-image: url("./assets/images/BG_05.png");
   background-size: cover;
 }
 
@@ -2074,6 +2086,10 @@ text {
 }
 
 @media (min-width: 768px), only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2){
+  .md\:aspect-h-12{
+    --tw-aspect-h: 12;
+  }
+
   .md\:right-10{
     right: 2.5rem;
   }
@@ -2110,8 +2126,24 @@ text {
     height: 50%;
   }
 
+  .md\:h-3\/12{
+    height: 25%;
+  }
+
+  .md\:h-5\/12{
+    height: 41.666667%;
+  }
+
   .md\:max-h-700{
     max-height: 700px;
+  }
+
+  .md\:w-4\/12{
+    width: 33.333333%;
+  }
+
+  .md\:w-5\/12{
+    width: 41.666667%;
   }
 
   .md\:w-6\/12{
@@ -2120,10 +2152,6 @@ text {
 
   .md\:w-7\/12{
     width: 58.333333%;
-  }
-
-  .md\:w-8\/12{
-    width: 66.666667%;
   }
 
   .md\:w-10\/12{
@@ -2154,6 +2182,11 @@ text {
 
   .md\:gap-2{
     gap: 0.5rem;
+  }
+
+  .md\:px-7{
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
   }
 
   .md\:px-10{
@@ -2378,6 +2411,10 @@ text {
     width: 75%;
   }
 
+  .xl\:w-10\/12{
+    width: 83.333333%;
+  }
+
   .xl\:w-11\/12{
     width: 91.666667%;
   }
@@ -2594,6 +2631,10 @@ text {
     width: 58.333333%;
   }
 
+  .\32xl\:w-9\/12{
+    width: 75%;
+  }
+
   .\32xl\:max-w-lg{
     max-width: 32rem;
   }
@@ -2604,6 +2645,10 @@ text {
 
   .\32xl\:justify-end{
     justify-content: flex-end;
+  }
+
+  .\32xl\:justify-center{
+    justify-content: center;
   }
 
   .\32xl\:pt-28per{
@@ -2750,6 +2795,10 @@ text {
 
   .ipad\:w-9\/12{
     width: 75%;
+  }
+
+  .ipad\:w-10\/12{
+    width: 83.333333%;
   }
 
   .ipad\:w-11\/12{

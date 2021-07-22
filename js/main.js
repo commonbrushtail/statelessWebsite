@@ -4,6 +4,44 @@ const viewer = new ImageCompare(element, { fluidMode: true, hoverStart: true }).
 const element2 = document.getElementById("image-compare2");
 const viewer2 = new ImageCompare(element2, { fluidMode: true, hoverStart: true }).mount();
 var s1TL = gsap.timeline({ paused: true });
+var s5TL = gsap.timeline({ paused: true });
+s5TL.from(".white-dot", 1, {
+  scale: 0,
+  yoyo: true,
+  transformOrigin: "50% 50%",
+  ease: "elastic.outout(0.8,0.3)",
+  stagger: {
+    amount: -1,
+
+    from: "random",
+  },
+});
+s5TL.from(".red-dot", 1, {
+  scale: 0.3,
+  y: "-1000",
+  yoyo: true,
+  transformOrigin: "50% 50%",
+  ease: "power1.inOut",
+  stagger: {
+    amount: 1.5,
+    grid: "auto",
+    from: "center",
+  },
+});
+var s5TL2 = gsap.timeline({ paused: true });
+s5TL2.from(".red-dot", 1, {
+  scale: 1.3,
+  repeat: -1,
+  yoyo: true,
+  transformOrigin: "50% 50%",
+  ease: "power1.inOut",
+  delay: 3,
+  stagger: {
+    amount: 1.5,
+    grid: "auto",
+    from: "center",
+  },
+});
 gsap.set(".a2, .a3, .a4, .a5", {
   autoAlpha: 0,
 });
@@ -1172,10 +1210,20 @@ new fullpage("#fullpage", {
       rippleTimeLine.clear();
       parallaxInstance2.disable();
     }
+    if (destination.item.classList.contains("section5")) {
+      s5TL2.pause();
+    }
   },
   afterLoad: function (origin, destination, direction) {
     if (destination.item.classList.contains("section1")) {
       s1TL.resume();
+    }
+    if (destination.item.classList.contains("section5")) {
+      console.log("asdasd");
+
+      s5TL.resume();
+
+      s5TL2.resume();
     }
 
     if (destination.item.classList.contains("pie-section")) {
