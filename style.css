@@ -1247,8 +1247,13 @@ body {
   overflow-x: hidden;
 }
 
+#fullpage {
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
 .section {
-  display: flex;
+  -webkit-overflow-scrolling: touch;
+  -webkit-transform: translate3d(0, 0, 0);
   width: 100%;
 }
 
@@ -1828,7 +1833,7 @@ text {
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-width: 1112px) and (max-device-width: 1112px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-width: 1180px) and (max-device-width: 1180px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-width: 1194px) and (max-device-width: 1194px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
 
 .od1 {
-    transform: translate(12%, 118%)
+    transform: translate(35%, 118%)
 }
   }
 
@@ -1867,7 +1872,7 @@ text {
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-width: 1112px) and (max-device-width: 1112px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-width: 1180px) and (max-device-width: 1180px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-width: 1194px) and (max-device-width: 1194px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
 
 .od2 {
-    transform: translate(120%, 119%)
+    transform: translate(166%, 119%)
 }
   }
 
@@ -1906,7 +1911,7 @@ text {
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-width: 1112px) and (max-device-width: 1112px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-width: 1180px) and (max-device-width: 1180px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-width: 1194px) and (max-device-width: 1194px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
 
 .od3 {
-    transform: translate(4%, 234%)
+    transform: translate(20%, 234%)
 }
   }
 
@@ -1945,7 +1950,7 @@ text {
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-width: 1112px) and (max-device-width: 1112px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-width: 1180px) and (max-device-width: 1180px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-width: 1194px) and (max-device-width: 1194px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
 
 .od4 {
-    transform: translate(132%, 170%)
+    transform: translate(181%, 170%)
 }
   }
 
@@ -1984,7 +1989,7 @@ text {
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-width: 1112px) and (max-device-width: 1112px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-width: 1180px) and (max-device-width: 1180px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-width: 1194px) and (max-device-width: 1194px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
 
 .od5 {
-    transform: translate(4%, 360%)
+    transform: translate(15%, 360%)
 }
   }
 
@@ -2023,7 +2028,7 @@ text {
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-width: 1112px) and (max-device-width: 1112px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-width: 1180px) and (max-device-width: 1180px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-width: 1194px) and (max-device-width: 1194px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
 
 .od6 {
-    transform: translate(156%, 360%)
+    transform: translate(203%, 360%)
 }
   }
 
@@ -2783,10 +2788,6 @@ text {
 
   .ipad\:w-4\/12{
     width: 33.333333%;
-  }
-
-  .ipad\:w-5\/12{
-    width: 41.666667%;
   }
 
   .ipad\:w-7\/12{
