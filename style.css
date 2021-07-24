@@ -796,8 +796,12 @@ video {
   width: 50%;
 }
 
-.w-9\/12{
-  width: 75%;
+.w-7\/12{
+  width: 58.333333%;
+}
+
+.w-8\/12{
+  width: 66.666667%;
 }
 
 .w-10\/12{
@@ -1280,7 +1284,7 @@ body {
   height: 85px;
 }
 
-@media (min-width: 768px), only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+@media (min-width: 768px) {
 
 .ob {
     width: 150px;
@@ -1318,7 +1322,7 @@ body {
 }
   }
 
-@media (min-width: 768px), only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+@media (min-width: 768px) {
 
 .ob1 {
     transform: translate(109%, -259%)
@@ -1364,7 +1368,7 @@ body {
 }
   }
 
-@media (min-width: 768px), only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+@media (min-width: 768px) {
 
 .ob2 {
     transform: translate(-23%, -169%)
@@ -1410,7 +1414,7 @@ body {
 }
   }
 
-@media (min-width: 768px), only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+@media (min-width: 768px) {
 
 .ob3 {
     transform: translate(-97%, -66%)
@@ -1456,7 +1460,7 @@ body {
 }
   }
 
-@media (min-width: 768px), only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+@media (min-width: 768px) {
 
 .ob4 {
     transform: translate(-131%, 52%)
@@ -1496,7 +1500,7 @@ body {
   height: 85px;
 }
 
-@media (min-width: 768px), only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+@media (min-width: 768px) {
 
 .ohm {
     width: 150px;
@@ -1516,7 +1520,7 @@ body {
 }
   }
 
-@media (min-width: 768px), only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+@media (min-width: 768px) {
 
 .ohm1 {
     transform: translate(109%, -221%)
@@ -1534,7 +1538,7 @@ body {
 }
   }
 
-@media (min-width: 768px), only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+@media (min-width: 768px) {
 
 .ohm5 {
     transform: translate(-20%, -283%)
@@ -1552,7 +1556,7 @@ body {
 }
   }
 
-@media (min-width: 768px), only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+@media (min-width: 768px) {
 
 .ohm6 {
     transform: translate(-143%, -179%)
@@ -1570,7 +1574,7 @@ body {
 }
   }
 
-@media (min-width: 768px), only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+@media (min-width: 768px) {
 
 .ohm7 {
     transform: translate(-218%, 7%)
@@ -1588,7 +1592,7 @@ body {
 }
   }
 
-@media (min-width: 768px), only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+@media (min-width: 768px) {
 
 .ohm2 {
     transform: translate(-23%, -169%)
@@ -1606,7 +1610,7 @@ body {
 }
   }
 
-@media (min-width: 768px), only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+@media (min-width: 768px) {
 
 .ohm3 {
     transform: translate(-121%, -52%)
@@ -1624,7 +1628,7 @@ body {
 }
   }
 
-@media (min-width: 768px), only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+@media (min-width: 768px) {
 
 .ohm4 {
     transform: translate(-131%, 82%)
@@ -1813,20 +1817,20 @@ text {
 }
 
 .od1 {
-  transform: translate(9%, 19%);
+  transform: translate(-54%, 187%);
 }
 
-@media (min-width: 375px) {
+@media (min-width: 768px) {
 
 .od1 {
-    transform: translate(9%, 65%)
+    transform: translate(-54%, 267%)
 }
   }
 
-@media (min-width: 768px), only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
 
 .od1 {
-    transform: translate(9%, 20%)
+    transform: translate(-54%, 400%)
 }
   }
 
@@ -1852,20 +1856,20 @@ text {
   }
 
 .od2 {
-  transform: translate(94%, 60%);
+  transform: translate(119%, 170%);
 }
 
-@media (min-width: 375px) {
+@media (min-width: 768px) {
 
 .od2 {
-    transform: translate(94%, 95%)
+    transform: translate(131%, 173%)
 }
   }
 
-@media (min-width: 768px), only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
 
 .od2 {
-    transform: translate(94%, 115%)
+    transform: translate(131%, 263%)
 }
   }
 
@@ -1891,20 +1895,20 @@ text {
   }
 
 .od3 {
-  transform: translate(7%, 60%);
+  transform: translate(-29%, 161%);
 }
 
-@media (min-width: 375px) {
+@media (min-width: 768px) {
 
 .od3 {
-    transform: translate(7%, 110%)
+    transform: translate(-29%, 229%)
 }
   }
 
-@media (min-width: 768px), only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
 
 .od3 {
-    transform: translate(7%, 120%)
+    transform: translate(-29%, 309%)
 }
   }
 
@@ -1930,20 +1934,20 @@ text {
   }
 
 .od4 {
-  transform: translate(90%, 68%);
+  transform: translate(77%, 133%);
 }
 
-@media (min-width: 375px) {
+@media (min-width: 768px) {
 
 .od4 {
-    transform: translate(90%, 100%)
+    transform: translate(81%, 180%)
 }
   }
 
-@media (min-width: 768px), only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
 
 .od4 {
-    transform: translate(90%, 160%)
+    transform: translate(81%, 307%)
 }
   }
 
@@ -1969,20 +1973,20 @@ text {
   }
 
 .od5 {
-  transform: translate(8%, 103%);
+  transform: translate(6%, 145%);
 }
 
-@media (min-width: 375px) {
+@media (min-width: 768px) {
 
 .od5 {
-    transform: translate(8%, 160%)
+    transform: translate(6%, 186%)
 }
   }
 
-@media (min-width: 768px), only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
 
 .od5 {
-    transform: translate(8%, 230%)
+    transform: translate(6%, 239%)
 }
   }
 
@@ -2008,20 +2012,13 @@ text {
   }
 
 .od6 {
-  transform: translate(97%, 150%);
+  transform: translate(107%, 218%);
 }
 
-@media (min-width: 375px) {
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
 
 .od6 {
-    transform: translate(97%, 200%)
-}
-  }
-
-@media (min-width: 768px), only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-
-.od6 {
-    transform: translate(97%, 350%)
+    transform: translate(107%, 342%)
 }
   }
 
@@ -2046,6 +2043,14 @@ text {
 }
   }
 
+.od {
+  pointer-events: all !important;
+}
+
+.od-text {
+  pointer-events: none !important;
+}
+
 @media (min-width: 375px){
   .xs\:mt-7{
     margin-top: 1.75rem;
@@ -2053,6 +2058,10 @@ text {
 
   .xs\:h-4\/12{
     height:  33.333333%;
+  }
+
+  .xs\:w-8\/12{
+    width: 66.666667%;
   }
 
   .xs\:whitespace-nowrap{
@@ -2090,7 +2099,7 @@ text {
   }
 }
 
-@media (min-width: 768px), only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2){
+@media (min-width: 768px){
   .md\:aspect-h-12{
     --tw-aspect-h: 12;
   }
@@ -2167,6 +2176,10 @@ text {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
+  }
+
+  .md\:max-w-md{
+    max-width: 28rem;
   }
 
   .md\:max-w-lg{
@@ -2688,6 +2701,16 @@ text {
 
   .\33xl\:pl-32{
     padding-left: 8rem;
+  }
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2){
+  .ipadProP\:w-7\/12{
+    width: 58.333333%;
+  }
+
+  .ipadProP\:max-w-none{
+    max-width: none;
   }
 }
 

@@ -1,3 +1,21 @@
+var scene7 = document.getElementById("scene7");
+var parallaxInstance1 = new Parallax(scene7, {
+  pointerEvents: true,
+});
+parallaxInstance1.disable();
+
+var scene22 = document.getElementById("scene22");
+var parallaxInstance2 = new Parallax(scene22, {
+  pointerEvents: true,
+});
+parallaxInstance2.disable();
+
+var scene23 = document.getElementById("scene23");
+var parallaxInstance3 = new Parallax(scene23, {
+  pointerEvents: true,
+});
+parallaxInstance3.disable();
+
 const element = document.getElementById("image-compare1");
 const viewer = new ImageCompare(element, { fluidMode: true, hoverStart: true }).mount();
 
@@ -59,7 +77,95 @@ gsap.set(".pie", { autoAlpha: 0 });
 ScrollTrigger.matchMedia({
   "(min-width: 320px) and (max-width: 1023.9px)": function () {
     console.log("mobile to portait ipad");
+    let od = document.querySelectorAll(".od");
+    let odOutter = document.querySelectorAll(".od-outter");
+    gsap.set(".od-text", {
+      autoAlpha: 0,
+    });
 
+    gsap.to(".od-outter-1", {
+      x: "80%",
+      y: "-173%",
+    });
+    gsap.to(".od1-text", {
+      autoAlpha: 1,
+    });
+    
+    od.forEach((element) => {
+      element.addEventListener("click", (e) => {
+        console.log(e.currentTarget.classList);
+        gsap.to(odOutter, {
+          x: 0,
+          y: 0,
+        });
+        gsap.to(".od-text", {
+          autoAlpha: 0,
+        });
+
+        if (e.currentTarget.classList.contains("od-inner-1")) {
+          gsap.to(".od-outter-1", {
+            x: "80%",
+            y: "-173%",
+          });
+          gsap.to(".od1-text", {
+            autoAlpha: 1,
+          });
+          return;
+        }
+        if (e.currentTarget.classList.contains("od-inner-2")) {
+          gsap.to(".od-outter-2", {
+            x: "-100%",
+            y: "-173%",
+          });
+          gsap.to(".od2-text", {
+            autoAlpha: 1,
+          });
+          return;
+        }
+        if (e.currentTarget.classList.contains("od-inner-3")) {
+          gsap.to(".od-outter-3", {
+            x: "60%",
+            y: "-160%",
+          });
+          gsap.to(".od3-text", {
+            autoAlpha: 1,
+          });
+          return;
+        }
+        if (e.currentTarget.classList.contains("od-inner-4")) {
+          gsap.to(".od-outter-4", {
+            x: "-60%",
+            y: "-130%",
+          });
+          gsap.to(".od4-text", {
+            autoAlpha: 1,
+          });
+          return;
+        }
+        if (e.currentTarget.classList.contains("od-inner-5")) {
+          gsap.to(".od-outter-5", {
+            x: "20%",
+            y: "-130%",
+          });
+          gsap.to(".od5-text", {
+            autoAlpha: 1,
+          });
+          return;
+        }
+        if (e.currentTarget.classList.contains("od-inner-6")) {
+          gsap.to(".od-outter-6", {
+            x: "-70%",
+            y: "-180%",
+          });
+          gsap.to(".od6-text", {
+            autoAlpha: 1,
+          });
+          return;
+        }
+      });
+    });
+
+    
     dart.from(".line-to-target", { duration: 3, stagger: 0.1, drawSVG: 0 });
     dart.from(
       ".dart-t1",
@@ -224,6 +330,93 @@ ScrollTrigger.matchMedia({
   },
   "only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2)": function () {
     console.log("ipad pro portrait");
+    let od = document.querySelectorAll(".od");
+    let odOutter = document.querySelectorAll(".od-outter");
+    gsap.set(".od-text", {
+      autoAlpha: 0,
+    });
+    gsap.set(".od-outter-1", {
+      x: "80%",
+      y: "-300%",
+    });
+    gsap.set(".od1-text", {
+      autoAlpha: 1,
+    });
+    od.forEach((element) => {
+      element.addEventListener("click", (e) => {
+        console.log(e.currentTarget.classList);
+        gsap.to(odOutter, {
+          x: 0,
+          y: 0,
+        });
+        gsap.to(".od-text", {
+          autoAlpha: 0,
+        });
+
+        if (e.currentTarget.classList.contains("od-inner-1")) {
+          gsap.to(".od-outter-1", {
+            x: "80%",
+            y: "-300%",
+          });
+          gsap.to(".od1-text", {
+            autoAlpha: 1,
+          });
+          return;
+        }
+        if (e.currentTarget.classList.contains("od-inner-2")) {
+          gsap.to(".od-outter-2", {
+            x: "-100%",
+            y: "-173%",
+          });
+          gsap.to(".od2-text", {
+            autoAlpha: 1,
+          });
+          return;
+        }
+        if (e.currentTarget.classList.contains("od-inner-3")) {
+          gsap.to(".od-outter-3", {
+            x: "60%",
+            y: "-200%",
+          });
+          gsap.to(".od3-text", {
+            autoAlpha: 1,
+          });
+          return;
+        }
+        if (e.currentTarget.classList.contains("od-inner-4")) {
+          gsap.to(".od-outter-4", {
+            x: "-55%",
+            y: "-245%",
+          });
+          gsap.to(".od4-text", {
+            autoAlpha: 1,
+          });
+          return;
+        }
+        if (e.currentTarget.classList.contains("od-inner-5")) {
+          gsap.to(".od-outter-5", {
+            x: "40%",
+            y: "-140%",
+          });
+          gsap.to(".od5-text", {
+            autoAlpha: 1,
+          });
+          return;
+        }
+        if (e.currentTarget.classList.contains("od-inner-6")) {
+          gsap.to(".od-outter-6", {
+            x: "-60%",
+            y: "-250%",
+          });
+          gsap.to(".od6-text", {
+            autoAlpha: 1,
+          });
+          return;
+        }
+      });
+    });
+
+   
 
     dart.from(".line-to-target", { duration: 3, stagger: 0.1, drawSVG: 0 });
     dart.from(
@@ -260,6 +453,61 @@ ScrollTrigger.matchMedia({
         autoAlpha: 0,
       },
       "<+0.7"
+    );
+    gearMobile.to(
+      ".gear-m5",
+      {
+        rotation: 360,
+        repeat: -1,
+        transformOrigin: "50% 50%",
+        duration: 50,
+        ease: "power0",
+      },
+      "<"
+    );
+    gearMobile.to(
+      ".gear-m4",
+      {
+        rotation: 360,
+        repeat: -1,
+        transformOrigin: "50% 50%",
+        duration: 50,
+        ease: "power0",
+      },
+      "<"
+    );
+    gearMobile.to(
+      ".gear-m3",
+      {
+        rotation: -360,
+        repeat: -1,
+        transformOrigin: "50% 50%",
+        duration: 50,
+        ease: "power0",
+      },
+      "<"
+    );
+    gearMobile.to(
+      ".gear-m2",
+      {
+        rotation: -360,
+        repeat: -1,
+        transformOrigin: "50% 50%",
+        duration: 50,
+        ease: "power0",
+      },
+      "<"
+    );
+    gearMobile.to(
+      ".gear-m1",
+      {
+        rotation: 360,
+        repeat: -1,
+        transformOrigin: "50% 50%",
+        duration: 50,
+        ease: "power0",
+      },
+      "<"
     );
 
     s1TL.fromTo(
@@ -1278,24 +1526,6 @@ const swiper2 = new Swiper(".swiper-container2", {
   resistanceRatio: 0,
   speed: 1000,
 });
-
-var scene7 = document.getElementById("scene7");
-var parallaxInstance1 = new Parallax(scene7, {
-  pointerEvents: true,
-});
-parallaxInstance1.disable();
-
-var scene22 = document.getElementById("scene22");
-var parallaxInstance2 = new Parallax(scene22, {
-  pointerEvents: true,
-});
-parallaxInstance2.disable();
-
-var scene23 = document.getElementById("scene23");
-var parallaxInstance3 = new Parallax(scene23, {
-  pointerEvents: true,
-});
-parallaxInstance3.disable();
 
 var rippleTimeLine = gsap.timeline({
   pause: true,
