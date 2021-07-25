@@ -1,3 +1,5 @@
+gsap.registerPlugin(ScrambleTextPlugin, ScrollTrigger, Flip, ScrollToPlugin, DrawSVGPlugin, ScrambleTextPlugin);
+var pathVideo = document.querySelector('.path-video')
 var scene7 = document.getElementById("scene7");
 var parallaxInstance1 = new Parallax(scene7, {
   pointerEvents: true,
@@ -69,10 +71,141 @@ gsap.set(".a3, .a4, .a5", {
   autoAlpha: 0,
 });
 var pie = gsap.timeline();
+var bar = gsap.timeline({ paused: true });
+
+bar.from(".bar-chart-left", {
+  duration: 5,
+
+  transformOrigin: "100% 0%",
+  scaleX: 0,
+  stagger: function (index, target, list) {
+    // your custom logic here. Return the delay from the start (not between each)
+    return index * 0.3;
+  },
+});
+bar.from(
+  ".bar-chart-right",
+  {
+    duration: 5,
+
+    transformOrigin: "0% 100%",
+    scaleX: 0,
+    stagger: function (index, target, list) {
+      // your custom logic here. Return the delay from the start (not between each)
+      return index * 0.3;
+    },
+  },
+  "<"
+);
+bar.from(
+  ".number-left",
+  {
+    duration: 5,
+    autoAlpha: 0,
+  },
+  "<+4"
+);
+bar.from(
+  ".number-right",
+  {
+    duration: 5,
+    autoAlpha: 0,
+  },
+  "<"
+);
+gsap.set('.path-circle-1',{
+  fill:"none"
+})
+gsap.set('.path-circle-text-1',{
+  fill:"none"
+})
+gsap.set('.path-circle-2',{
+  fill:"none"
+})
+gsap.set('.path-circle-text-2',{
+  fill:"none"
+})
 var dart = gsap.timeline({ paused: true });
 var gearMobile = gsap.timeline({ paused: true });
 var gearDesktop = gsap.timeline({ paused: true });
-gsap.registerPlugin(ScrambleTextPlugin, ScrollTrigger, Flip, ScrollToPlugin, DrawSVGPlugin);
+var lineChart = gsap.timeline({ paused: true });
+var greenLineChart = gsap.timeline({ paused: true });
+
+greenLineChart.from(
+  ".top-green-line-chart",
+  {
+    duration: 5,
+    drawSVG: 0,
+  },
+  "<"
+);
+greenLineChart.from(
+  ".green-line-chart-color",
+  {
+    duration: 5,
+    opacity: 0,
+  },
+  "<"
+);
+greenLineChart.from(
+  ".line-in-green-chart",
+  {
+    duration: 5,
+    drawSVG: "100% 100%",
+
+    stagger: true,
+  },
+  "<"
+);
+greenLineChart.to(".green-line-number-1", { duration: 5, scrambleText: { text: "348.0", chars: "123456789", speed: 5, revealDelay: 1, tweenLength: false } }, "<");
+greenLineChart.to(".green-line-number-2", { duration: 5, scrambleText: { text: "918.1", chars: "123456789", speed: 5, revealDelay: 1 } }, "<");
+greenLineChart.to(".green-line-number-3", { duration: 5, scrambleText: { text: "433.6", chars: "123456789", speed: 5, revealDelay: 1 } }, "<");
+greenLineChart.to(".green-line-number-4", { duration: 5, scrambleText: { text: "863.7", chars: "123456789", speed: 5, revealDelay: 1 } }, "<");
+greenLineChart.to(".green-line-number-5", { duration: 5, scrambleText: { text: "973.3", chars: "123456789", speed: 5, revealDelay: 1 } }, "<");
+greenLineChart.to(".green-line-number-6", { duration: 5, scrambleText: { text: "973.3", chars: "123456789", speed: 5, revealDelay: 1 } }, "<");
+greenLineChart.to(".green-line-number-7", { duration: 5, scrambleText: { text: "1,279.6", chars: "123456789", speed: 5, revealDelay: 1 } }, "<");
+greenLineChart.to(".green-line-number-8", { duration: 5, scrambleText: { text: "1,319.6", chars: "123456789", speed: 5, revealDelay: 1 } }, "<");
+greenLineChart.to(".green-line-number-9", { duration: 5, scrambleText: { text: "1,305.2", chars: "123456789", speed: 5, revealDelay: 1 } }, "<");
+greenLineChart.to(".green-line-number-10", { duration: 5, scrambleText: { text: "1,479.9", chars: "123456789", speed: 5, revealDelay: 1 } }, "<");
+greenLineChart.to(".green-line-number-11", { duration: 5, scrambleText: { text: "1,471.8", chars: "123456789", speed: 5, revealDelay: 1 } }, "<");
+
+lineChart.from(
+  ".top-line-chart",
+  {
+    duration: 5,
+    drawSVG: 0,
+  },
+  "<"
+);
+lineChart.from(
+  ".line-chart-color",
+  {
+    duration: 5,
+    opacity: 0,
+  },
+  "<"
+);
+lineChart.from(
+  ".line-in-chart",
+  {
+    duration: 5,
+    drawSVG: "100% 100%",
+
+    stagger: true,
+  },
+  "<"
+);
+lineChart.to(".line-number-1", { duration: 5, scrambleText: { text: "457,409", chars: "123456789", speed: 5, revealDelay: 1, tweenLength: false } }, "<");
+lineChart.to(".line-number-2", { duration: 5, scrambleText: { text: "452,553", chars: "123456789", speed: 5, revealDelay: 1 } }, "<");
+lineChart.to(".line-number-3", { duration: 5, scrambleText: { text: "446,492", chars: "123456789", speed: 5, revealDelay: 1 } }, "<");
+lineChart.to(".line-number-4", { duration: 5, scrambleText: { text: "461,975", chars: "123456789", speed: 5, revealDelay: 1 } }, "<");
+lineChart.to(".line-number-5", { duration: 5, scrambleText: { text: "507,645", chars: "123456789", speed: 5, revealDelay: 1 } }, "<");
+lineChart.to(".line-number-6", { duration: 5, scrambleText: { text: "825,153", chars: "123456789", speed: 5, revealDelay: 1 } }, "<");
+lineChart.to(".line-number-7", { duration: 5, scrambleText: { text: "789,519", chars: "123456789", speed: 5, revealDelay: 1 } }, "<");
+lineChart.to(".line-number-8", { duration: 5, scrambleText: { text: "558,334", chars: "123456789", speed: 5, revealDelay: 1 } }, "<");
+lineChart.to(".line-number-9", { duration: 5, scrambleText: { text: "557,324", chars: "123456789", speed: 5, revealDelay: 1 } }, "<");
+lineChart.to(".line-number-10", { duration: 5, scrambleText: { text: "574,618", chars: "123456789", speed: 5, revealDelay: 1 } }, "<");
+lineChart.to(".line-number-11", { duration: 5, scrambleText: { text: "547,160", chars: "123456789", speed: 5, revealDelay: 1 } }, "<");
 gsap.set(".pie", { autoAlpha: 0 });
 ScrollTrigger.matchMedia({
   "(min-width: 320px) and (max-width: 1023.9px)": function () {
@@ -90,7 +223,7 @@ ScrollTrigger.matchMedia({
     gsap.to(".od1-text", {
       autoAlpha: 1,
     });
-    
+
     od.forEach((element) => {
       element.addEventListener("click", (e) => {
         console.log(e.currentTarget.classList);
@@ -165,7 +298,6 @@ ScrollTrigger.matchMedia({
       });
     });
 
-    
     dart.from(".line-to-target", { duration: 3, stagger: 0.1, drawSVG: 0 });
     dart.from(
       ".dart-t1",
@@ -236,6 +368,7 @@ ScrollTrigger.matchMedia({
       },
       "<"
     );
+    /*
     gearMobile.to(
       ".gear-m2",
       {
@@ -247,6 +380,7 @@ ScrollTrigger.matchMedia({
       },
       "<"
     );
+    */
     gearMobile.to(
       ".gear-m1",
       {
@@ -415,8 +549,6 @@ ScrollTrigger.matchMedia({
         }
       });
     });
-
-   
 
     dart.from(".line-to-target", { duration: 3, stagger: 0.1, drawSVG: 0 });
     dart.from(
@@ -1362,8 +1494,18 @@ ScrollTrigger.matchMedia({
 
 new fullpage("#fullpage", {
   //options here
+
   autoScrolling: true,
+  
   onLeave: function (origin, destination, direction) {
+    if (destination.item.classList.contains("path-section")) {
+      document.querySelector('.path-video').play()
+      document.querySelector('.path-video').style.opacity = 1
+    }
+    if (!destination.item.classList.contains("path-section")) {
+      document.querySelector('.path-video').pause()
+      
+    }
     if (origin.item.classList.contains("beforeQuote") && destination.item.classList.contains("fpQuoteSlide1")) {
       gsap.fromTo(
         ".quote-slide",
@@ -1425,19 +1567,19 @@ new fullpage("#fullpage", {
     }
     if (destination.item.classList.contains("fpQuoteSlide2")) {
       swiper.slideTo(1);
-      swiper2.slideTo(0);
+      swiper2.slideTo(1);
     }
     if (destination.item.classList.contains("fpQuoteSlide3")) {
       swiper.slideTo(2);
-      swiper2.slideTo(1);
+      swiper2.slideTo(2);
     }
     if (destination.item.classList.contains("fpQuoteSlide4")) {
       swiper.slideTo(3);
-      swiper2.slideTo(1);
+      swiper2.slideTo(3);
     }
     if (destination.item.classList.contains("fpQuoteSlide5")) {
       swiper.slideTo(4);
-      swiper2.slideTo(2);
+      swiper2.slideTo(4);
     }
 
     if (origin.item.classList.contains("gear-section")) {
@@ -1464,6 +1606,55 @@ new fullpage("#fullpage", {
     }
   },
   afterLoad: function (origin, destination, direction) {
+    if (destination.item.classList.contains("path-section")) {
+      document.querySelector('.path-video').play()
+      document.querySelector('.path-video').style.opacity = 1  
+    }
+    if (!destination.item.classList.contains("path-section")) {
+      document.querySelector('.path-video').pause()
+      setTimeout(() => {
+        document.querySelector('.path-video').style.opacity = 0  
+      }, 100);
+      
+    }
+    if (destination.item.classList.contains("path-section-2")) {
+      gsap.to('.path-circle-1',{
+        fill:"#fdb913",
+        ease:"power0",
+        transformOrigin:"50% 50%",
+        duration:3,
+      })
+      gsap.to('.path-circle-text-1',{
+        fill:"#002A28",
+        delay:1,
+        zIndex:3,
+      })
+      
+    }
+    if (destination.item.classList.contains("path-section-3")) {
+      gsap.to('.path-circle-2',{
+        fill:"#fdb913",
+        ease:"power0",
+        transformOrigin:"50% 50%",
+        duration:3,
+      })
+      gsap.to('.path-circle-text-2',{
+        fill:"#002A28",
+        delay:1,
+        zIndex:3,
+      })
+      
+    }
+    if (destination.item.classList.contains("bar-chart-section")) {
+      bar.play();
+    }
+    if (destination.item.classList.contains("green-line-chart-section")) {
+      greenLineChart.play();
+    }
+    if (destination.item.classList.contains("line-chart-section")) {
+      lineChart.play();
+    }
+
     if (destination.item.classList.contains("section1")) {
       s1TL.resume();
     }
@@ -1668,6 +1859,8 @@ ob.forEach((element) => {
 
 let oh = document.querySelectorAll(".oh");
 let oh1 = document.querySelector(".oh1");
+
+oh.forEach((element) => {});
 
 gsap.set(oh1.children[1], {
   scale: 0.7,
