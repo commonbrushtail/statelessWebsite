@@ -1131,10 +1131,6 @@ video {
   padding-top: 7vh;
 }
 
-.pt-74\.92per{
-  padding-top: 74.92%;
-}
-
 .pt-35per{
   padding-top: 35%;
 }
@@ -1401,7 +1397,7 @@ body {
 @media (min-width: 1280px) {
 
 .ob1 {
-    transform: translate(-94%, -262%)
+    transform: translate(-94%, -196%)
 }
   }
 
@@ -1447,7 +1443,7 @@ body {
 @media (min-width: 1280px) {
 
 .ob2 {
-    transform: translate(-182%, -133%)
+    transform: translate(-194%, -112%)
 }
   }
 
@@ -1493,7 +1489,7 @@ body {
 @media (min-width: 1280px) {
 
 .ob3 {
-    transform: translate(-300%, 6%)
+    transform: translate(-212%, 13%)
 }
   }
 
@@ -1539,7 +1535,7 @@ body {
 @media (min-width: 1280px) {
 
 .ob4 {
-    transform: translate(-194%, 145%)
+    transform: translate(-135%, 123%)
 }
   }
 
@@ -2062,7 +2058,7 @@ text {
 @media (min-width: 1280px) {
 
 .od5 {
-    transform: translate(17%, 408%)
+    transform: translate(17%, 379%)
 }
   }
 
@@ -2094,7 +2090,7 @@ text {
 @media (min-width: 1280px) {
 
 .od6 {
-    transform: translate(201%, 408%)
+    transform: translate(201%, 379%)
 }
   }
 
@@ -2385,10 +2381,6 @@ text {
     left: 50%;
   }
 
-  .xl\:left-55per{
-    left: 55%;
-  }
-
   .xl\:left-6\/12{
     left: 50%;
   }
@@ -2412,8 +2404,8 @@ text {
     margin-top: 2.5rem;
   }
 
-  .xl\:mt-1\/12{
-    margin-top:  8.333333%;
+  .xl\:mt-5per{
+    margin-top: 5%;
   }
 
   .xl\:mb-0{
@@ -2508,6 +2500,10 @@ text {
     width: 50%;
   }
 
+  .xl\:w-7\/12{
+    width: 58.333333%;
+  }
+
   .xl\:w-8\/12{
     width: 66.666667%;
   }
@@ -2548,6 +2544,10 @@ text {
 
   .xl\:max-w-5xl{
     max-width: 64rem;
+  }
+
+  .xl\:max-w-6xl{
+    max-width: 72rem;
   }
 
   .xl\:transform{
@@ -2720,6 +2720,10 @@ text {
     --tw-aspect-h: 4;
   }
 
+  .\32xl\:aspect-h-7{
+    --tw-aspect-h: 7;
+  }
+
   .\32xl\:right-0{
     right: 0px;
   }
@@ -2730,6 +2734,10 @@ text {
 
   .\32xl\:left-initial{
     left: initial;
+  }
+
+  .\32xl\:mt-1\/12{
+    margin-top:  8.333333%;
   }
 
   .\32xl\:h-full{
@@ -2748,8 +2756,16 @@ text {
     width: 25%;
   }
 
+  .\32xl\:w-4\/12{
+    width: 33.333333%;
+  }
+
   .\32xl\:w-5\/12{
     width: 41.666667%;
+  }
+
+  .\32xl\:w-6\/12{
+    width: 50%;
   }
 
   .\32xl\:w-7\/12{

@@ -1543,6 +1543,7 @@ new fullpage("#fullpage", {
         {
           opacity: 0,
           y: "-100vh",
+          ease:"power0"
         }
       );
     }
