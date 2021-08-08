@@ -1,5 +1,5 @@
 gsap.registerPlugin(ScrambleTextPlugin, ScrollTrigger, Flip, ScrollToPlugin, DrawSVGPlugin, ScrambleTextPlugin);
-var pathVideo = document.querySelector('.path-video')
+var pathVideo = document.querySelector(".path-video");
 var scene7 = document.getElementById("scene7");
 var parallaxInstance1 = new Parallax(scene7, {
   pointerEvents: true,
@@ -18,11 +18,13 @@ var parallaxInstance3 = new Parallax(scene23, {
 });
 parallaxInstance3.disable();
 
+
+
 const element = document.getElementById("image-compare1");
-const viewer = new ImageCompare(element, { fluidMode: true, hoverStart: true }).mount();
+const viewer = new ImageCompare(element, { fluidMode: true, hoverStart: true, smoothing: true, }).mount();
 
 const element2 = document.getElementById("image-compare2");
-const viewer2 = new ImageCompare(element2, { fluidMode: true, hoverStart: true }).mount();
+const viewer2 = new ImageCompare(element2, { fluidMode: true, hoverStart: true, smoothing: true, }).mount();
 var s1TL = gsap.timeline({ paused: true });
 var s5TL = gsap.timeline({ paused: true });
 s5TL.from(".white-dot", 1, {
@@ -70,8 +72,389 @@ gsap.set(".a3, .a4, .a5", {
   position: "absolute",
   autoAlpha: 0,
 });
+
 var pie = gsap.timeline();
+var section2 = gsap.timeline({ paused: true });
+var section34 = gsap.timeline({ paused: true });
+var section9 = gsap.timeline({ paused: true });
+var section26 = gsap.timeline({ paused: true });
 var bar = gsap.timeline({ paused: true });
+var path1 = gsap.timeline({ paused: true });
+var path2 = gsap.timeline({ paused: true });
+var path3 = gsap.timeline({ paused: true });
+var sky1 = gsap.timeline({ paused: true });
+var sky2 = gsap.timeline({ paused: true });
+var sky3 = gsap.timeline({ paused: true });
+var sky4 = gsap.timeline({ paused: true });
+var ten = gsap.timeline({ paused: true });
+var believe = gsap.timeline({ paused: true });
+var up = gsap.timeline({ paused: true });
+
+
+section26.from(".s26-line-1",{
+  duration:3,
+  scale:100,
+  transformOrigin:"50% 50%"
+})
+
+section26.from(".s26-line-2",{
+  drawSVG:0,
+  duration:3,
+  y:"-100%"
+  
+},"<")
+
+section26.from(".s26-line-3",{
+  autoAlpha:0,
+  
+})
+
+up.from(".up-line-1",{
+  
+  drawSVG:"50% 50%",
+  duration:4,
+  ease:"bounce.in"
+},"<")
+up.from(".up-line-2",{
+  duration:3,
+  autoAlpha:0
+},"<+2.5")
+up.from(".up-line-3",{
+  duration:3,
+  autoAlpha:0
+},"<+1")
+
+
+
+believe.from(".believe-1",{
+  autoAlpha:0,
+  duration:2,
+  scale:1.5,
+  transformOrigin:"50% 50%"
+})
+believe.from(".believe-2",{
+  autoAlpha:0,
+  duration:1.5,
+})
+believe.from(".believe-3",{
+  autoAlpha:0,
+  drawSVG:0,
+  duration:3,
+},"<")
+
+
+section2.from(".two-1",{
+  autoAlpha:0,
+  duration:1.5,
+})
+section2.from(".two-2",{
+  autoAlpha:0,
+  duration:1.5,
+  scale:0,
+})
+section2.from(".two-3",{
+  autoAlpha:0
+})
+
+section34.fromTo(".s34-1",{
+  
+  scale:0,
+  transformOrigin:"90% 100%",
+  
+},{
+  scale:1,
+  duration:2,
+  ease:"back.out(10)"
+  
+})
+section34.from(".s34-2",{
+  autoAlpha:0,
+  
+})
+section34.from(".s34-3",{
+  scale:0,
+  ease:"back.out(3)"
+  
+})
+section34.from(".s34-4",{
+  autoAlpha:0
+  
+  
+},"<")
+
+
+
+
+
+section9.from(".section9-1",{
+  
+  
+  x:"-200%",
+  duration:4,
+  ease:"back.out(2)"
+})
+section9.from(".section9-2",{
+  drawSVG:"50% 50%",
+  
+})
+section9.from(".section9-3",{
+  autoAlpha:0,
+  x:"200%",
+  duration:2
+},"<+1")
+
+ten.from(".ten-1", {
+  duration: 3,
+  ease: "back.out(4)",
+ 
+
+  scale:0,
+  transformOrigin:"-100% 50%"
+});
+ten.from(".ten-2", {
+  scale:0,
+  transformOrigin:"50% 50%"
+  
+});
+ten.from(".ten-3", {
+  duration: 1,
+  
+  autoAlpha: 0,
+},"<");
+ten.from(".ten-4", {
+  autoAlpha: 0,
+  duration:1.5
+});
+
+sky1.from(".sky-1-line-1", {
+  duration: 3,
+  drawSVG: 0,
+  autoAlpha: 0,
+});
+sky1.from(
+  ".sky-1-line-2",
+  {
+    duration: 1,
+    drawSVG: "100% 100%",
+    
+  },
+  
+);
+sky1.from(
+  ".sky-1-line-3",
+  {
+    
+    scale:0,
+    duration: 3,
+    
+    autoAlpha: 0,
+  },
+  
+);
+sky1.from(
+  ".sky-1-line-4",
+  {
+    scale:0,
+    transformOrigin:"50% 50%"  
+  },"<+0.8"
+  
+);
+sky1.from(
+  ".sky-1-line-5",
+  {
+    scale:0,
+    transformOrigin:"50% 50%"  
+  },"<+1.6"
+  
+);
+
+
+sky2.from(".sky-2-line-1", {
+  duration: 3,
+  drawSVG: 0,
+  autoAlpha: 0,
+});
+sky2.from(
+  ".sky-2-line-2",
+  {
+    duration: 1,
+    drawSVG: "100% 100%",
+    
+  },
+  
+);
+sky2.from(
+  ".sky-2-line-3",
+  {
+    
+    scale:0,
+    duration: 3,
+    
+    autoAlpha: 0,
+  },
+  
+);
+sky2.from(
+  ".sky-2-line-4",
+  {
+    scale:0,
+    transformOrigin:"50% 50%"  
+  },"<+0.8"
+  
+);
+sky2.from(
+  ".sky-2-line-5",
+  {
+    scale:0,
+    transformOrigin:"50% 50%"  
+  },"<+1.6"
+  
+);
+
+sky3.from(".sky-3-line-1-m", {
+  duration: 3,
+  drawSVG: 0,
+  autoAlpha: 0,
+});
+sky3.from(
+  ".sky-3-line-2-m",
+  {
+    duration: 3,
+    scale:0
+    
+  },
+  
+);
+sky3.from(
+  ".sky-3-line-3-m",
+  {
+    
+    scale:0,
+    transformOrigin:"50% 50%"  ,
+    
+  },"<+0.2",
+  
+);
+sky3.from(
+  ".sky-3-line-4-m",
+  {
+    scale:0,
+    transformOrigin:"50% 50%"  
+  },"<+1"
+  
+);
+sky3.from(
+  ".sky-3-line-5-m",
+  {
+    scale:0,
+    transformOrigin:"50% 50%"  
+  },"<+1.5"
+  
+);
+
+sky4.from(".sky-4-line-1", {
+  duration: 3,
+  drawSVG: 0,
+  autoAlpha: 0,
+});
+
+
+path1.from(".path-1-line-1", {
+  duration: 1,
+  drawSVG: 0,
+  autoAlpha: 0,
+});
+path1.from(
+  ".path-1-line-2",
+  {
+    duration: 1,
+    drawSVG: 0,
+    autoAlpha: 0,
+  },
+  "<+=0.4"
+);
+path1.from(
+  ".path-1-line-3",
+  {
+    duration: 1,
+    drawSVG: 0,
+    autoAlpha: 0,
+  },
+  "<+=0.4"
+);
+path1.from(
+  ".path-1-line-4",
+  {
+    duration: 1,
+    drawSVG: 0,
+    autoAlpha: 0,
+  },
+  "<+=0.4"
+);
+
+path2.from(".path-2-line-1", {
+  duration: 1,
+  drawSVG: 0,
+  autoAlpha: 0,
+});
+path2.from(
+  ".path-2-line-2",
+  {
+    duration: 1,
+    drawSVG: 0,
+    autoAlpha: 0,
+  },
+  "<+=0.4"
+);
+path2.from(
+  ".path-2-line-3",
+  {
+    duration: 1,
+    drawSVG: 0,
+    autoAlpha: 0,
+  },
+  "<+=0.4"
+);
+path2.from(
+  ".path-2-line-4",
+  {
+    duration: 1,
+    drawSVG: 0,
+    autoAlpha: 0,
+  },
+  "<+=0.4"
+);
+
+path3.from(".path-3-line-1", {
+  duration: 1,
+  drawSVG: 0,
+  autoAlpha: 0,
+});
+path3.from(
+  ".path-3-line-2",
+  {
+    duration: 1,
+    drawSVG: 0,
+    autoAlpha: 0,
+  },
+  "<+=0.4"
+);
+
+
+gsap.set(".path-circle-1", {
+  fill: "none",
+  autoAlpha: 0,
+});
+gsap.set(".path-circle-text-1", {
+  fill: "none",
+});
+gsap.set(".path-circle-2", {
+  fill: "none",
+  autoAlpha: 0,
+});
+gsap.set(".path-circle-text-2", {
+  fill: "none",
+});
 
 bar.from(".bar-chart-left", {
   duration: 5,
@@ -113,21 +496,11 @@ bar.from(
   },
   "<"
 );
-gsap.set('.path-circle-1',{
-  fill:"none"
-})
-gsap.set('.path-circle-text-1',{
-  fill:"none"
-})
-gsap.set('.path-circle-2',{
-  fill:"none"
-})
-gsap.set('.path-circle-text-2',{
-  fill:"none"
-})
+
 var dart = gsap.timeline({ paused: true });
 var gearMobile = gsap.timeline({ paused: true });
 var gearDesktop = gsap.timeline({ paused: true });
+
 var lineChart = gsap.timeline({ paused: true });
 var greenLineChart = gsap.timeline({ paused: true });
 
@@ -212,6 +585,9 @@ ScrollTrigger.matchMedia({
     console.log("mobile to portait ipad");
     let od = document.querySelectorAll(".od");
     let odOutter = document.querySelectorAll(".od-outter");
+
+    
+
     gsap.set(".od-text", {
       autoAlpha: 0,
     });
@@ -713,7 +1089,7 @@ ScrollTrigger.matchMedia({
   },
   "(min-width: 1280px)": function () {
     console.log("desktop from 1280px onward");
-
+    
     gearDesktop.to(
       ".gear-d5",
       {
@@ -1494,17 +1870,25 @@ ScrollTrigger.matchMedia({
 
 new fullpage("#fullpage", {
   //options here
-
-  autoScrolling: true,
+  normalScrollElements: '.credit',
   
+  
+
   onLeave: function (origin, destination, direction) {
+    if (destination.item.classList.contains("sky-section")) {
+      document.querySelector(".sky-video").play();
+      document.querySelector(".sky-video").style.opacity = 1;
+    }
+    if (!destination.item.classList.contains("sky-section")) {
+      document.querySelector(".sky-video").pause();
+    }
+
     if (destination.item.classList.contains("path-section")) {
-      document.querySelector('.path-video').play()
-      document.querySelector('.path-video').style.opacity = 1
+      document.querySelector(".path-video").play();
+      document.querySelector(".path-video").style.opacity = 1;
     }
     if (!destination.item.classList.contains("path-section")) {
-      document.querySelector('.path-video').pause()
-      
+      document.querySelector(".path-video").pause();
     }
     if (origin.item.classList.contains("beforeQuote") && destination.item.classList.contains("fpQuoteSlide1")) {
       gsap.fromTo(
@@ -1543,7 +1927,7 @@ new fullpage("#fullpage", {
         {
           opacity: 0,
           y: "-100vh",
-          ease:"power0"
+          ease: "power0",
         }
       );
     }
@@ -1607,44 +1991,96 @@ new fullpage("#fullpage", {
     }
   },
   afterLoad: function (origin, destination, direction) {
+    if (destination.item.classList.contains("section26")) {
+      section26.resume()
+    }
+    if (destination.item.classList.contains("section34")) {
+      section34.resume()
+    }
+    if (destination.item.classList.contains("up-section")) {
+      up.resume()
+    }
+    if (destination.item.classList.contains("believe")) {
+      believe.resume()
+    }
+    if (destination.item.classList.contains("section9")) {
+      section9.resume()
+    }
+    if (destination.item.classList.contains("section2")) {
+      section2.resume()
+    }
+    if (destination.item.classList.contains("sky-section")) {
+      document.querySelector(".sky-video").play();
+      document.querySelector(".sky-video").style.opacity = 1;
+    }
+    if (!destination.item.classList.contains("sky-section")) {
+      document.querySelector(".sky-video").pause();
+      setTimeout(() => {
+        document.querySelector(".sky-video").style.opacity = 0;
+      }, 100);
+    }
     if (destination.item.classList.contains("path-section")) {
-      document.querySelector('.path-video').play()
-      document.querySelector('.path-video').style.opacity = 1  
+      document.querySelector(".path-video").play();
+      document.querySelector(".path-video").style.opacity = 1;
     }
     if (!destination.item.classList.contains("path-section")) {
-      document.querySelector('.path-video').pause()
+      document.querySelector(".path-video").pause();
       setTimeout(() => {
-        document.querySelector('.path-video').style.opacity = 0  
+        document.querySelector(".path-video").style.opacity = 0;
       }, 100);
-      
+    }
+
+    if (destination.item.classList.contains("sky1")) {
+      sky1.resume();
+    }
+    if (destination.item.classList.contains("sky2")) {
+      sky2.resume();
+    }
+    if (destination.item.classList.contains("sky3")) {
+      sky3.resume();
+     
+    }
+    if (destination.item.classList.contains("sky4")) {
+      sky4.resume();
+     
+    }
+    if (destination.item.classList.contains("section10Year")) {
+      ten.resume();
+     
+    }
+
+    if (destination.item.classList.contains("path-section-1")) {
+      path1.resume();
     }
     if (destination.item.classList.contains("path-section-2")) {
-      gsap.to('.path-circle-1',{
-        fill:"#fdb913",
-        ease:"power0",
-        transformOrigin:"50% 50%",
-        duration:3,
-      })
-      gsap.to('.path-circle-text-1',{
-        fill:"#002A28",
-        delay:1,
-        zIndex:3,
-      })
-      
+      gsap.to(".path-circle-1", {
+        fill: "#fdb913",
+        ease: "power0",
+        autoAlpha: 1,
+        transformOrigin: "50% 50%",
+        duration: 3,
+      });
+      gsap.to(".path-circle-text-1", {
+        fill: "#002A28",
+        delay: 1,
+        zIndex: 3,
+      });
+      path2.resume();
     }
     if (destination.item.classList.contains("path-section-3")) {
-      gsap.to('.path-circle-2',{
-        fill:"#fdb913",
-        ease:"power0",
-        transformOrigin:"50% 50%",
-        duration:3,
-      })
-      gsap.to('.path-circle-text-2',{
-        fill:"#002A28",
-        delay:1,
-        zIndex:3,
-      })
-      
+      gsap.to(".path-circle-2", {
+        fill: "#fdb913",
+        ease: "power0",
+        autoAlpha: 1,
+        transformOrigin: "50% 50%",
+        duration: 3,
+      });
+      gsap.to(".path-circle-text-2", {
+        fill: "#002A28",
+        delay: 1,
+        zIndex: 3,
+      });
+      path3.resume();
     }
     if (destination.item.classList.contains("bar-chart-section")) {
       bar.play();
