@@ -525,11 +525,15 @@ video {
 @font-face {
   font-family: "sanBold";
 
+  font-weight: 600;
+
   src: url("fonts/IBMPlexSansThai-Bold.ttf");
 }
 
 @font-face {
   font-family: "sanReg";
+
+  font-weight: 400;
 
   src: url("fonts/IBMPlexSansThai-Regular.ttf");
 }
