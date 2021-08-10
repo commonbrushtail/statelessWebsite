@@ -1852,6 +1852,13 @@ new fullpage("#fullpage", {
   normalScrollElements: ".credit",
 
   onLeave: function (origin, destination, direction) {
+    if (origin.item.classList.contains("section5")) {
+    
+
+      s5TL.pause();
+
+      s5TL2.pause();
+    }
     if (destination.item.classList.contains("sky-section")) {
       document.querySelector(".sky-video").play();
       document.querySelector(".sky-video").style.opacity = 1;
