@@ -240,112 +240,151 @@ ten.from(".ten-4", {
 sky1.from(".sky-1-line-1", {
   duration: 3,
   drawSVG: 0,
-  autoAlpha: 0,
+  
 });
+sky1.from(".sky-1-line-4", {
+  duration:2,
+  autoAlpha: 0,
+},'<');
 sky1.from(".sky-1-line-2", {
   duration: 1,
   drawSVG: "100% 100%",
 });
+sky1.from(".sky-1-line-5", {
+  duration:2,
+  autoAlpha: 0,
+},'<');
 sky1.from(".sky-1-line-3", {
   scale: 0,
   duration: 3,
-
-  autoAlpha: 0,
+ 
 });
-sky1.from(
-  ".sky-1-line-4",
-  {
-    scale: 0,
-    transformOrigin: "50% 50%",
-  },
-  "<+0.8"
-);
-sky1.from(
-  ".sky-1-line-5",
-  {
-    scale: 0,
-    transformOrigin: "50% 50%",
-  },
-  "<+1.6"
-);
+sky1.from(".sky-1-line-6", {
+  duration:2,
+  autoAlpha: 0,
+},'<+1');
+sky1.from(".sky-1-line-7", {
+  duration:2,
+  autoAlpha: 0,
+},'<+1');
+
 
 sky2.from(".sky-2-line-1", {
   duration: 3,
   drawSVG: 0,
-  autoAlpha: 0,
-});
-sky2.from(".sky-2-line-2", {
-  duration: 1,
-  drawSVG: "100% 100%",
-});
-sky2.from(".sky-2-line-3", {
-  scale: 0,
-  duration: 3,
-
-  autoAlpha: 0,
 });
 sky2.from(
   ".sky-2-line-4",
   {
-    scale: 0,
-    transformOrigin: "50% 50%",
+    autoAlpha:0
+    
   },
-  "<+0.8"
+  "<"
 );
+sky2.from(".sky-2-line-2", {
+  duration: 1,
+  drawSVG: "100% 100%",
+});
 sky2.from(
   ".sky-2-line-5",
   {
-    scale: 0,
-    transformOrigin: "50% 50%",
+    autoAlpha:0
+    
   },
-  "<+1.6"
+  "<+1"
+);
+sky2.from(".sky-2-line-3", {
+  scale: 0,
+  duration: 3,
+});
+sky2.from(
+  ".sky-2-line-6",
+  {
+    autoAlpha:0
+    
+  },
+  "<+1"
+);
+sky2.from(
+  ".sky-2-line-7",
+  {
+    autoAlpha:0
+    
+  },
+  "<+1"
 );
 
-sky3.from(".sky-3-line-1-m", {
+
+
+sky3.from(".sky-3-line-1", {
   duration: 3,
   drawSVG: 0,
-  autoAlpha: 0,
-});
-sky3.from(".sky-3-line-2-m", {
-  duration: 3,
-  scale: 0,
+  ease:"power0"
+  
 });
 sky3.from(
-  ".sky-3-line-3-m",
+  ".sky-3-line-3",
   {
-    scale: 0,
-    transformOrigin: "50% 50%",
+   autoAlpha:0
   },
   "<+0.2"
 );
 sky3.from(
-  ".sky-3-line-4-m",
+  ".sky-3-line-4",
   {
-    scale: 0,
-    transformOrigin: "50% 50%",
-  },
-  "<+1"
-);
-sky3.from(
-  ".sky-3-line-5-m",
-  {
-    scale: 0,
-    transformOrigin: "50% 50%",
+   autoAlpha:0
   },
   "<+1.5"
 );
 
+sky3.from(".sky-3-line-2", {
+  duration: 3,
+  scale: 0,
+  ease:"power0"
+});
+sky3.from(
+  ".sky-3-line-5",
+  {
+   autoAlpha:0
+  },
+  "<+1"
+);
+sky3.from(
+  ".sky-3-line-6",
+  {
+   autoAlpha:0
+  },
+  "<+1"
+);
+sky3.from(
+  ".sky-3-line-7",
+  {
+   autoAlpha:0
+  },
+  "<+1"
+);
+
+
 sky4.from(".sky-4-line-1", {
   duration: 3,
   drawSVG: 0,
-  autoAlpha: 0,
+  ease:"power0"
 });
+sky4.from(".sky-4-line-2", {
+  autoAlpha:0
+},"<+1");
+sky4.from(".sky-4-line-3", {
+  autoAlpha:0
+},"<+1");
+sky4.from(".sky-4-line-4", {
+  autoAlpha:0
+},"<+1");
 
 path1.from(".path-1-line-1", {
   duration: 1,
   drawSVG: 0,
   autoAlpha: 0,
-});
+},"<+1");
 path1.from(
   ".path-1-line-2",
   {
@@ -420,6 +459,15 @@ path3.from(
     autoAlpha: 0,
   },
   "<+=0.4"
+);
+path3.from(
+  ".path-3-line-3",
+  {
+    
+   
+    autoAlpha: 0,
+  },
+  "<+1"
 );
 
 gsap.set(".path-circle-1", {
@@ -974,6 +1022,7 @@ ScrollTrigger.matchMedia({
       },
       "<"
     );
+    /*
     gearMobile.to(
       ".gear-m2",
       {
@@ -985,6 +1034,7 @@ ScrollTrigger.matchMedia({
       },
       "<"
     );
+    */
     gearMobile.to(
       ".gear-m1",
       {
@@ -1853,8 +1903,6 @@ new fullpage("#fullpage", {
 
   onLeave: function (origin, destination, direction) {
     if (origin.item.classList.contains("section5")) {
-    
-
       s5TL.pause();
 
       s5TL2.pause();
@@ -2095,7 +2143,7 @@ new fullpage("#fullpage", {
       pie.from(".pie-info-1", { autoAlpha: 0 }, "<0.5");
       pie.from(".pie-info-2", { autoAlpha: 0 }, "<0.5");
       pie.from(".pie-info-3", { autoAlpha: 0 }, "<0.5");
-      pie.from(".pie-info-4", { autoAlpha: 0 }, "<0.5");
+      pie.from(".pie-info-4", { autoAlpha: 0, stagger: 0.4  }, "<0.5");
     }
 
     if (destination.item.classList.contains("dart-section")) {
