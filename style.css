@@ -2740,6 +2740,10 @@ text {
     width: max-content;
   }
 
+  .xl\:w-2p{
+    width: 2px;
+  }
+
   .xl\:w-3p{
     width: 3px;
   }
@@ -2950,6 +2954,10 @@ text {
 
   .xl\:text-4xl{
     font-size: 2.25rem;
+  }
+
+  .xl\:text-5xl{
+    font-size: 3rem;
   }
 
   .xl\:text-6xl{
@@ -3275,6 +3283,10 @@ text {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
+  }
+
+  .ipad\:w-2p{
+    width: 2px;
   }
 
   .ipad\:w-3p{

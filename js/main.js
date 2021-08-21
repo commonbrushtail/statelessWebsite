@@ -381,93 +381,93 @@ sky4.from(".sky-4-line-4", {
 },"<+1");
 
 path1.from(".path-1-line-1", {
-  duration: 1,
+  duration: 2,
   drawSVG: 0,
   autoAlpha: 0,
-},"<+1");
+});
 path1.from(
   ".path-1-line-2",
   {
-    duration: 1,
+    duration: 2,
     drawSVG: 0,
     autoAlpha: 0,
   },
-  "<+=0.4"
+ 
 );
 path1.from(
   ".path-1-line-3",
   {
-    duration: 1,
+    duration: 2,
     drawSVG: 0,
     autoAlpha: 0,
   },
-  "<+=0.4"
+  
 );
 path1.from(
   ".path-1-line-4",
   {
-    duration: 1,
+    duration: 3,
     drawSVG: 0,
     autoAlpha: 0,
   },
-  "<+=0.4"
+  
 );
 
 path2.from(".path-2-line-1", {
-  duration: 1,
+  duration: 3,
   drawSVG: 0,
   autoAlpha: 0,
 });
 path2.from(
   ".path-2-line-2",
   {
-    duration: 1,
+    duration: 3,
     drawSVG: 0,
     autoAlpha: 0,
   },
-  "<+=0.4"
+  
 );
 path2.from(
   ".path-2-line-3",
   {
-    duration: 1,
+    duration: 3,
     drawSVG: 0,
     autoAlpha: 0,
   },
-  "<+=0.4"
+  
 );
 path2.from(
   ".path-2-line-4",
   {
-    duration: 1,
+    duration: 3,
     drawSVG: 0,
     autoAlpha: 0,
   },
-  "<+=0.4"
+  
 );
 
 path3.from(".path-3-line-1", {
-  duration: 1,
+  duration: 3,
   drawSVG: 0,
   autoAlpha: 0,
 });
 path3.from(
   ".path-3-line-2",
   {
-    duration: 1,
+    duration: 3,
     drawSVG: 0,
     autoAlpha: 0,
   },
-  "<+=0.4"
+  
 );
 path3.from(
   ".path-3-line-3",
   {
-    
-   
+    duration:3,
+    drawSVG: 0,
     autoAlpha: 0,
   },
-  "<+1"
+  
 );
 
 gsap.set(".path-circle-1", {
@@ -2088,10 +2088,11 @@ new fullpage("#fullpage", {
         autoAlpha: 1,
         transformOrigin: "50% 50%",
         duration: 3,
+        delay: 3
       });
       gsap.to(".path-circle-text-1", {
         fill: "#002A28",
-        delay: 1,
+        delay: 3,
         zIndex: 3,
       });
       path2.resume();
@@ -2103,10 +2104,11 @@ new fullpage("#fullpage", {
         autoAlpha: 1,
         transformOrigin: "50% 50%",
         duration: 3,
+        delay: 6,
       });
       gsap.to(".path-circle-text-2", {
         fill: "#002A28",
-        delay: 1,
+        delay: 6,
         zIndex: 3,
       });
       path3.resume();
