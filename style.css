@@ -758,8 +758,12 @@ video {
   left: 0px;
 }
 
-.left-24{
-  left: 6rem;
+.left-22{
+  left: 5.5rem;
+}
+
+.left-44{
+  left: 11rem;
 }
 
 .left-1\/2{
@@ -2579,8 +2583,12 @@ text {
     left: 0px;
   }
 
-  .xl\:left-44{
-    left: 11rem;
+  .xl\:left-36{
+    left: 9rem;
+  }
+
+  .xl\:left-76{
+    left: 19rem;
   }
 
   .xl\:left-1\/2{
@@ -3152,8 +3160,12 @@ text {
     right: -1.25rem;
   }
 
-  .ipad\:left-36{
-    left: 9rem;
+  .ipad\:left-30{
+    left: 7.5rem;
+  }
+
+  .ipad\:left-60{
+    left: 15rem;
   }
 
   .ipad\:-left-5{
@@ -3481,8 +3493,8 @@ text {
   }
 }
 
-@media (max-height: 650px){
-  .h650\:overflow-y-scroll{
+@media (max-height: 800px){
+  .h800\:overflow-y-scroll{
     overflow-y: scroll;
   }
 }
